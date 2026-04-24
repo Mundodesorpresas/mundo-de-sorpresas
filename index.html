@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo de Sorpresas - Hispania, Antioquia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="logo-container">
+            <img src="logo.png" alt="Mundo de Sorpresas Logo" class="logo" id="site-logo">
+            <h1>Mundo de Sorpresas</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#galeria">Galería</a>
+            <a href="#resenas">Reseñas</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://www.facebook.com/share/17RwtCjbTF/?mibextid=wwXIfr" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content glass-panel">
+            <h2>Expresa tus sentimientos con cada detalle</h2>
+            <p>La mejor tienda de detalles y sorpresas en <strong>Hispania, Antioquia</strong>. Especialistas en hacer sonreír a quienes más quieres.</p>
+            <a href="#galeria" class="btn-primary">Ver Sorpresas</a>
+        </div>
+    </header>
+
+    <!-- Upload & Gallery Section -->
+    <section id="galeria" class="section">
+        <h2 class="section-title">Nuestras Sorpresas</h2>
+        <div class="upload-container glass-panel">
+            <h3>¿Quieres añadir tus propios detalles a la galería?</h3>
+            <p>Sube imágenes de tus productos y sorpresas aquí para mostrarlas.</p>
+            <label for="imageUpload" class="custom-file-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Subir Imágenes
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Default mock image -->
+            <div class="gallery-item"><img src="gift_box_placeholder.webp" alt="Detalle Premium"></div>
+            <!-- Uploaded imgs go here -->
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="resenas" class="section bg-light">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        
+        <div class="reviews-container">
+            <!-- Form to add review -->
+            <div class="review-form glass-panel">
+                <h3>Déjanos tu opinión</h3>
+                <div class="star-rating" id="starRating">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <input type="text" id="reviewName" placeholder="Tu Nombre" required>
+                <textarea id="reviewText" rows="3" placeholder="Cuéntanos tu experiencia..." required></textarea>
+                <button type="button" id="submitReviewBtn" class="btn-primary">Publicar Reseña</button>
+            </div>
+
+            <!-- List of reviews -->
+            <div class="reviews-list" id="reviewsList">
+                <div class="review-card glass-panel">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h4>María Fernanda</h4>
+                    <p>"Excelente atención. Me ayudaron a sorprender a mi mamá en su cumpleaños desde lejos. Recomendadísimo en Hispania."</p>
+                </div>
+                <div class="review-card glass-panel">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h4>Juan Carlos</h4>
+                    <p>"Los mejores detalles y la presentación super exclusiva. ¡Me encantó la tienda!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contacto" style="text-align: center; padding: 40px; margin-top: 50px; background: rgba(0,0,0,0.05);">
+        <h3>Mundo de Sorpresas</h3>
+        <p>Hispania, Antioquia</p>
+        <p>Tel: 3205968774</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">© 2026 Mundo de Sorpresas. Creado con ❤️.</p>
+    </footer>
+
+    <!-- Chat Bot -->
+    <div class="chat-bot-container" id="chatContainer">
+        <div class="chat-header" id="chatHeader">
+            <span><i class="fas fa-comment-dots"></i> Atención al Cliente</span>
+            <i class="fas fa-chevron-down" id="chatToggle"></i>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message bot">
+                <p>¡Hola! Bienvenidos a Mundo de Sorpresas 🎉 ¿En qué te podemos ayudar hoy?</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573205968774" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
