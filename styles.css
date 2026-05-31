@@ -547,3 +547,27 @@ input[type="file"] {
     .whatsapp-float { left: 20px; bottom: 20px; width: 60px; height: 60px; font-size: 32px; }
     .hero-content { padding: 2rem; }
 }
+
+/* Delete Button */
+.btn-delete {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+    background: #ff1a1a;
+}
