@@ -140,17 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
         appendMessage('user', text);
         chatInput.value = '';
 
-        // Simular que el bot está escribiendo por 1.5s
+        // Abrir WhatsApp en una nueva pestaña con el mensaje del usuario
+        const whatsappNumber = "573205968774";
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+        window.open(whatsappUrl, '_blank');
+
+        // Mostrar un mensaje del bot indicando la redirección
         setTimeout(() => {
-            appendMessage('bot', "Escribiendo...");
-            
-            setTimeout(() => {
-                // Remover el mensaje de "Escribiendo..."
-                chatBody.removeChild(chatBody.lastChild);
-                // Mostrar la respuesta automática del bot
-                appendMessage('bot', defaultBotReply);
-            }, 1000);
-            
+            appendMessage('bot', "Redirigiendo a WhatsApp... ¡En breve un asesor te atenderá personalmente!");
         }, 500);
     }
 
