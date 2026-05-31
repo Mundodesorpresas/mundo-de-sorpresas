@@ -18,7 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = event.target.result;
                 img.alt = 'Nuevo Detalle';
                 
+                const btnContainer = document.createElement('div');
+                btnContainer.style = 'padding: 15px; text-align: center;';
+                btnContainer.innerHTML = '<a href="https://www.paypal.com/ncp/payment/J3F77SVE3FQD4" target="_blank" class="btn-secondary" style="margin: 0; width: 100%; font-size: 1rem; padding: 10px 20px;"><i class="fab fa-paypal"></i> Comprar ahora</a>';
+                
                 imgContainer.appendChild(img);
+                imgContainer.appendChild(btnContainer);
                 // Añadir al principio de la galería
                 galleryGrid.insertBefore(imgContainer, galleryGrid.firstChild);
             };
